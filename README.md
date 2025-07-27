@@ -14,7 +14,8 @@ This project provides two AWS Lambda functions for end-to-end processing of voic
   - Sends audio to OpenAI's [Whisper](https://openai.com/research/whisper) model.
   - Receives and returns the text transcript.
 - **Output**: Raw text transcript of spoken audio.
-- [Endpoint](https://l2rulpi2rl.execute-api.eu-central-1.amazonaws.com/default/voicelinemain) (Post Request)
+- [Endpoint](https://l2rulpi2rl.execute-api.eu-central-1.amazonaws.com/default/voicelinemain) (Post Request) (You need to pass audio in form for this to work)
+- Example: curl --location 'https://l2rulpi2rl.execute-api.eu-central-1.amazonaws.com/default/voicelinemain' \--form 'audio_file=@"path"'
 
 ### 2. `VoiceLineSummarizeLambda`
 **Purpose**: Summarizes the transcript into structured conversation data.
